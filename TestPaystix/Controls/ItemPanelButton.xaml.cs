@@ -20,6 +20,22 @@ namespace TestPaystix.Controls
     /// </summary>
     public partial class ItemPanelButton : UserControl
     {
+
+        #region Свойство зависимости
+
+        public static readonly DependencyProperty TitleProperty =
+            DependencyProperty.Register(
+                nameof(Title),
+                typeof(string),
+                typeof(ItemPanelButton),
+                new PropertyMetadata(default(string)));
+
+        public string Title
+        {
+            get => (string)GetValue(TitleProperty);
+            set => SetValue(TitleProperty, value);
+        } 
+        #endregion
         public ItemPanelButton()
         {
             InitializeComponent();
@@ -29,19 +45,15 @@ namespace TestPaystix.Controls
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            ButtonText.Content = sender.ToString();
+            Title = sender.ToString();
         }
-
-        
+              
 
         private void ButtonText_Click(object sender, RoutedEventArgs e)
         {
             VisibilityStyle.Visibility = Visibility.Visible;
         }
-
-       
-
-      
+           
 
         private void DockPanel_MouseLeave(object sender, MouseEventArgs e)
         {
