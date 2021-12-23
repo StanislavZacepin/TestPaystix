@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace TestPaystix.Controls
+{
+    /// <summary>
+    /// Логика взаимодействия для ItemPanelButton.xaml
+    /// </summary>
+    public partial class ItemPanelButton : UserControl
+    {
+        public ItemPanelButton()
+        {
+            InitializeComponent();
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            ButtonText.Content = sender.ToString();
+        }
+
+        
+
+        private void ButtonText_Click(object sender, RoutedEventArgs e)
+        {
+            VisibilityStyle.Visibility = Visibility.Visible;
+        }
+
+       
+
+      
+
+        private void DockPanel_MouseLeave(object sender, MouseEventArgs e)
+        {
+            VisibilityStyle.Visibility = Visibility.Collapsed;
+        }
+
+        
+    }
+}
