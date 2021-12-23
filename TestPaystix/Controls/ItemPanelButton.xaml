@@ -5,19 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestPaystix.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" MaxWidth="450"
+             d:DesignHeight="200" d:DesignWidth="400" MaxWidth="450"
              DataContext="{Binding RelativeSource={RelativeSource Self}}">
         <DockPanel MouseLeave="DockPanel_MouseLeave" >
-        <Button  Content="{Binding  Title}" DockPanel.Dock="Top" Height="150" Click="ButtonText_Click" HorizontalAlignment="Right" Width="450"  />
+        <Button DockPanel.Dock="Top" Height="150" Click="ButtonText_Click" HorizontalAlignment="Right" Width="450">
+            <TextBlock Text="{Binding Title}"/>
+        </Button>
         <StackPanel x:Name="VisibilityStyle"  Orientation="Horizontal" Visibility="Collapsed" >
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="MaxWidth" Value="50"/>
+                    <Setter Property="MinWidth" Value="40"/>
+                </Style>
+            </StackPanel.Resources>
             <!--<StackPanel.Resources>
                 <Style TargetType="Button">
                     <Setter  Property="Visibility" Value="Visible"/>
                 </Style>
             </StackPanel.Resources>-->
-            <Button Content="1" Width="150" Click="Button_Click" />
-            <Button Content="2" Width="150" Click="Button_Click" />
-            <Button Content="3" MinWidth="150" MaxWidth="150" Click="Button_Click" />
+            <Button Content="1"  Click="Button_Click" />
+            <Button Content="2"  Click="Button_Click1" />
+            <Button Content="3"  Click="Button_Click2" />
         </StackPanel>
     </DockPanel>
 </UserControl>

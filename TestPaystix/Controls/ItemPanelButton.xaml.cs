@@ -44,11 +44,18 @@ namespace TestPaystix.Controls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            Title = sender.ToString();
-        }
-              
 
+            Title = "1";
+        }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            Title = "2";
+        }
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Title = "3";
+        }
         private void ButtonText_Click(object sender, RoutedEventArgs e)
         {
             VisibilityStyle.Visibility = Visibility.Visible;
@@ -60,6 +67,6 @@ namespace TestPaystix.Controls
             VisibilityStyle.Visibility = Visibility.Collapsed;
         }
 
-        
+       
     }
 }
