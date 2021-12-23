@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestPaystix.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="400" MaxWidth="450"
+             d:DesignHeight="200" d:DesignWidth="250" MaxWidth="250"
              DataContext="{Binding RelativeSource={RelativeSource Self}}">
         <DockPanel MouseLeave="DockPanel_MouseLeave" >
-        <Button DockPanel.Dock="Top" Height="150" Click="ButtonText_Click" HorizontalAlignment="Right" Width="450">
-            <TextBlock Text="{Binding Title}"/>
+        <Button DockPanel.Dock="Top" Height="100" Click="ButtonText_Click" HorizontalAlignment="Right" Width="250">
+            <TextBlock VerticalAlignment="Center" Text="{Binding Title}" />
         </Button>
         <StackPanel x:Name="VisibilityStyle"  Orientation="Horizontal" Visibility="Collapsed" >
             <StackPanel.Resources>
