@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="TestPaystix.Controls.ItemPanelButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestPaystix.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="250" MaxWidth="250"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+        <DockPanel MouseLeave="DockPanel_MouseLeave" >
+        <Button DockPanel.Dock="Top" Height="100" Click="ButtonText_Click" HorizontalAlignment="Right" Width="250">
+            <TextBlock VerticalAlignment="Center" Text="{Binding Title}" />
+        </Button>
+        <StackPanel x:Name="VisibilityStyle"  Orientation="Horizontal" Visibility="Collapsed" >
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="MaxWidth" Value="50"/>
+                    <Setter Property="MinWidth" Value="40"/>
+                </Style>
+            </StackPanel.Resources>
+            <!--<StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter  Property="Visibility" Value="Visible"/>
+                </Style>
+            </StackPanel.Resources>-->
+            <Button Content="1"  Click="Button_Click" />
+            <Button Content="2"  Click="Button_Click1" />
+            <Button Content="3"  Click="Button_Click2" />
+        </StackPanel>
+    </DockPanel>
+</UserControl>
